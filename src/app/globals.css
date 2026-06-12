@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-open-sans);
+  --font-serif: var(--font-raleway);
+  --font-mono: var(--font-montserrat);
+
+  /* Kandle Direct Publishing - Premium Light Theme (PagePublishing style) */
+  --color-background: #FDFBF7;
+  --color-surface: #F3EFE6;
+  --color-card: #FDFBF7;
+  --color-primary: #1F2937;
+  --color-secondary: #4B5563;
+  --color-accent: #F97316; /* Orange */
+  --color-accent-hover: #EA580C; /* Darker Orange */
+  --color-terracotta: #F97316; /* Orange */
+  --color-border: #EAE6DF;
+}
+
+/* Custom Utilities */
+.flame-glow {
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.5), 0 0 20px rgba(234, 88, 12, 0.3);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.mask-linear {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
