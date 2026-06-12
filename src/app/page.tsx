@@ -3,6 +3,7 @@ import { PremiumServices } from "@/components/home/PremiumServices";
 import { Roadmap } from "@/components/home/Roadmap";
 import { AuthorTestimonials } from "@/components/home/AuthorTestimonials";
 import { ContactForm } from "@/components/home/ContactForm";
+import { FAQs } from "@/components/home/FAQs";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Roadmap />
       <AuthorTestimonials />
       <ContactForm />
+      <FAQs />
     </main>
   );
 }
