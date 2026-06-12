@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { servicesData } from '@/data/services';
+import { blogData } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.kandledirectpublishing.com';
@@ -15,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/services`,
+            lastModified: now,
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blog`,
             lastModified: now,
             changeFrequency: 'weekly',
             priority: 0.9,
@@ -41,5 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...staticPages, ...servicePages];
+    // Dynamic blog pages
+    const blogPages: MetadataRoute.Sitemap = blogData.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }));
+
+    return [...staticPages, ...servicePages, ...blogPages];
 }

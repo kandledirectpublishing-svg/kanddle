@@ -75,6 +75,7 @@ export function Navbar() {
           </div>
 
           <Link href="#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
+          <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
           <Link href="/contact" className="hover:text-accent transition-colors">Contact</Link>
         </nav>
 
