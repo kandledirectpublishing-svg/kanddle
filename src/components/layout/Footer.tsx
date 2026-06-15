@@ -34,10 +34,16 @@ export function Footer() {
                                 <p>
                                     <a href="mailto:info@kandledirectpublishing.com" className="hover:text-accent transition-colors">info@kandledirectpublishing.com</a>
                                 </p>
-                                <p className="text-gray-400">
-                                    173 Dallow Rd, Luton,<br />
-                                    LU1 1NX, UK
-                                </p>
+                                <div className="space-y-4 text-base text-gray-400 font-normal pt-2">
+                                    <div>
+                                        <p className="font-bold text-white text-sm uppercase tracking-wider mb-0.5">New York Office</p>
+                                        <p>123 Broadway, Suite 1500<br />New York, NY 10007</p>
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-white text-sm uppercase tracking-wider mb-0.5">Los Angeles Office</p>
+                                        <p>456 Wilshire Blvd, Suite 200<br />Los Angeles, CA 90010</p>
+                                    </div>
+                                </div>
                             </address>
                         </div>
 

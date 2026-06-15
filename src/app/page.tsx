@@ -3,6 +3,7 @@ import { PremiumServices } from "@/components/home/PremiumServices";
 import { Roadmap } from "@/components/home/Roadmap";
 import { AuthorTestimonials } from "@/components/home/AuthorTestimonials";
 import { ContactForm } from "@/components/home/ContactForm";
+import { FeaturedShowcase } from "@/components/home/FeaturedShowcase";
 import { FAQs } from "@/components/home/FAQs";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Roadmap />
       <AuthorTestimonials />
       <ContactForm />
+      <FeaturedShowcase />
       <FAQs />
     </main>
   );
