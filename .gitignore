@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SEO docx
+Kandle_Meta_Titles_Descriptions.docx
+parsed_docx.txt
+docx_temp/
+

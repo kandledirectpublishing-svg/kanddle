@@ -20,17 +20,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = servicesData.find((s) => s.slug === resolvedParams.slug);
   if (!service) return {};
   return {
-    title: `${service.title} | Professional Publishing Services`,
-    description: service.fullDescription,
+    title: service.metaTitle,
+    description: service.metaDescription,
     openGraph: {
-      title: `${service.title} | Kandle Direct Publishing`,
-      description: service.shortDescription,
+      title: service.metaTitle,
+      description: service.metaDescription,
     },
     alternates: {
       canonical: `https://www.kandledirectpublishing.com/services/${service.slug}`,
     },
   };
 }
+
 
 export default async function ServiceDetail({ params }: PageProps) {
   const resolvedParams = await params;
