@@ -232,6 +232,36 @@ export async function POST(request: Request) {
 
     const { firstName, lastName, email, phone, service, message } = parsed.data;
 
+    // 1. Save to Google Sheets via Webhook (if configured)
+    const sheetWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+    if (sheetWebhookUrl) {
+      try {
+        const sheetResponse = await fetch(sheetWebhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            phone,
+            service: service || "",
+            message: message || "",
+            date: new Date().toISOString(),
+          }),
+        });
+        
+        if (sheetResponse.ok) {
+          console.log(`✅ Enquiry saved to Google Sheets`);
+        } else {
+          console.error("Failed to save to Google Sheets:", await sheetResponse.text());
+        }
+      } catch (webhookError) {
+        console.error("Error sending to Google Sheets webhook:", webhookError);
+      }
+    }
+
     const hasSmtp =
       process.env.SMTP_USER &&
       process.env.SMTP_PASS;
