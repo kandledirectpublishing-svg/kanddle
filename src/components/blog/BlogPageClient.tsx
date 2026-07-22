@@ -2,20 +2,24 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { blogData } from "@/data/blog";
 import { BookOpen, FileText, Palette, Megaphone, Clock, Calendar, ArrowRight } from "lucide-react";
 
-const categories = ["All", "Self-Publishing", "Formatting", "Design", "Marketing"];
+const categories = ["All", "Publishing", "Self-Publishing", "Formatting", "Design", "Marketing"];
 
 export function BlogPageClient() {
   const [activeCategory, setActiveCategory] = useState("All");
 
+  const postsSorted = [...blogData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   const filteredPosts = activeCategory === "All"
-    ? blogData
-    : blogData.filter(post => post.category === activeCategory);
+    ? postsSorted
+    : postsSorted.filter(post => post.category === activeCategory);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
+      case "Publishing":
       case "Self-Publishing":
         return <BookOpen className="w-6 h-6 text-accent" />;
       case "Formatting":
@@ -95,15 +99,29 @@ export function BlogPageClient() {
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group"
               >
                 
-                {/* Visual Accent/Header for Post */}
-                <div className={`h-48 bg-gradient-to-br ${getCategoryGradient(post.category)} p-6 flex flex-col justify-between border-b border-border relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md relative z-10">
-                    {getCategoryIcon(post.category)}
+                {/* Featured Cover Image / Visual Accent for Post */}
+                <div className="relative h-48 w-full overflow-hidden border-b border-border bg-muted">
+                  {post.coverImage ? (
+                    <Image
+                      src={post.coverImage}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${getCategoryGradient(post.category)} p-6 flex flex-col justify-between`}>
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md">
+                        {getCategoryIcon(post.category)}
+                      </div>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-white/90 backdrop-blur-md text-primary font-sans font-bold text-xs px-3 py-1 rounded-full shadow-sm border border-border/50">
+                      {post.category}
+                    </span>
                   </div>
-                  <span className="bg-white/90 backdrop-blur-sm text-primary font-sans font-bold text-xs px-3 py-1 rounded-full w-fit shadow-sm border border-border/50 relative z-10">
-                    {post.category}
-                  </span>
                 </div>
 
                 {/* Card Content */}

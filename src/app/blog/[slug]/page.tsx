@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogData } from '@/data/blog';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, BookOpen, ChevronLeft } from 'lucide-react';
 
 interface PageProps {
@@ -99,6 +100,19 @@ export default async function BlogPostDetail({ params }: PageProps) {
                 </div>
               </div>
             </div>
+
+            {/* Featured Cover Image */}
+            {post.coverImage && (
+              <div className="relative w-full h-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg border border-border">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
 
             {/* Render HTML Content */}
             <div 
