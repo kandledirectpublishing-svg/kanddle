@@ -1,3 +1,18 @@
+export interface WhyChooseUsItem {
+  title: string;
+  description: string;
+}
+
+export interface HowItWorksItem {
+  step: string;
+  text: string;
+}
+
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -7,6 +22,11 @@ export interface Service {
   features: string[];
   metaTitle: string;
   metaDescription: string;
+  whyAuthorsChoose?: WhyChooseUsItem[];
+  howItWorks?: HowItWorksItem[];
+  whoItsFor?: string[];
+  whatMakesUsDifferent?: string[];
+  faqs?: ServiceFAQ[];
 }
 
 export const servicesData: Service[] = [
@@ -15,11 +35,53 @@ export const servicesData: Service[] = [
     slug: 'concept-development',
     title: 'Concept Development & Market Research',
     category: 'Concept & Manuscript',
-    shortDescription: 'Validate your book concept before you write.',
-    fullDescription: 'We research comparable titles, audience demand, and category trends to validate your book concept and positioning before you write a single chapter.',
-    features: ['Comp title analysis', 'Target reader persona', 'Category & genre positioning'],
-    metaTitle: 'Concept Development & Market Research | Kandle Direct Publishing',
-    metaDescription: 'Validate your book idea before you write. Kandle Direct Publishing helps authors research market trends and develop winning book concepts that are built to sell.'
+    shortDescription: 'Validate your book concept before you write a single chapter.',
+    fullDescription: 'Writing a book without validating the idea first is the #1 reason manuscripts fail to sell. Before you invest months writing, we research comparable titles, reader demand, category trends, and search behaviour across the US, UAE, and KSA. So, your concept is built to sell from day one, not just built on hope.\n\nWe treat your book idea like a product launch: tested against real market data, refined for your target reader, and positioned to compete in a crowded category rather than get lost in it.',
+    features: [
+      'Comp title & bestseller analysis — 5 - 10 comparable titles reviewed for positioning, pricing, and reader reception',
+      'Target reader persona — A clear profile of who your book is for and what drives them to buy',
+      'Category & genre positioning — The most viable Amazon/KDP categories for visibility and ranking',
+      'Book concept viability score — A straightforward rating of your idea\'s commercial potential',
+      'Market demand & keyword research — What readers are actually searching for in your topic or genre',
+      'Positioning & hook recommendations — How to frame your premise so it stands out immediately'
+    ],
+    metaTitle: 'Book Concept Development & Market Research Services | Kandle Direct Publishing',
+    metaDescription: 'Validate your book idea before you write it. We research comp titles, reader demand, and category trends across US, UAE & KSA markets so your book is built to sell.',
+    whyAuthorsChoose: [
+      { title: 'Reduce risk', description: 'Know your idea has a real audience before you write it' },
+      { title: 'Save months', description: 'Skip guesswork and write with clear direction' },
+      { title: 'Stand out', description: 'Position your book against what\'s already selling in your category' },
+      { title: 'Go global', description: 'Validated for US, UAE, and KSA reader markets, not just one region' },
+      { title: 'Avoid oversaturation', description: 'Find underserved niches with real demand instead of crowded categories' },
+      { title: 'Write with confidence', description: 'Move forward knowing your concept has been stress-tested' }
+    ],
+    howItWorks: [
+      { step: 'Consultation', text: 'Share your idea, goals, and target market with us' },
+      { step: 'Research', text: 'We run comp title, category, and keyword research across your markets' },
+      { step: 'Report', text: 'You receive a clear viability report with positioning guidance' },
+      { step: 'Debrief', text: 'We walk through the findings together and map your next steps' }
+    ],
+    whoItsFor: [
+      'First-time authors who don\'t want to risk months on an unvalidated idea',
+      'Business owners and entrepreneurs writing a book to build authority or their brand',
+      'Experienced authors testing a new concept before committing to write it',
+      'Fiction authors deciding between genres or story angles',
+      'Nonfiction authors positioning a book around their expertise'
+    ],
+    whatMakesUsDifferent: [
+      'We research three markets at once — US, UAE, and KSA, instead of a single-region view',
+      'Our recommendations are based on real comp title and keyword data, not opinion',
+      'You get a written report, not just a verbal opinion, so you can reference it while writing',
+      'We work with both fiction and nonfiction authors',
+      'Every project includes a one-on-one debrief, not just an automated document'
+    ],
+    faqs: [
+      { question: 'How long does this take?', answer: 'Most projects are completed within 1–2 weeks.' },
+      { question: 'Can this help me choose between multiple book ideas?', answer: 'Yes. We can compare several concepts side by side to identify the strongest one.' },
+      { question: 'Does this work for fiction and nonfiction?', answer: 'Yes, our process adapts to both.' },
+      { question: 'Will this apply to the UAE and KSA markets specifically, not just the US?', answer: 'Yes. Regional reader trends and category competition are factored into every report.' },
+      { question: 'What do I receive at the end?', answer: 'A written viability report covering comp titles, reader persona, positioning, and recommended next steps, plus a live debrief call.' }
+    ]
   },
   {
     slug: 'ghostwriting',

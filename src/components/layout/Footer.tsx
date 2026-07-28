@@ -29,20 +29,14 @@ export function Footer() {
                             <h4 className="text-xs text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-800 pb-2">Contact</h4>
                             <address className="not-italic space-y-4 text-lg font-medium text-gray-300">
                                 <p>
-                                    <a href="tel:+447922656521" className="hover:text-accent transition-colors">+44 7922 656521</a>
+                                    <a href="tel:+447922656521" className="hover:text-accent transition-colors">+1(888)921 3331</a>
                                 </p>
                                 <p>
                                     <a href="mailto:info@kandledirectpublishing.com" className="hover:text-accent transition-colors">info@kandledirectpublishing.com</a>
                                 </p>
                                 <div className="space-y-4 text-base text-gray-400 font-normal pt-2">
-                                    <div>
-                                        <p className="font-bold text-white text-sm uppercase tracking-wider mb-0.5">New York Office</p>
-                                        <p>123 Broadway, Suite 1500<br />New York, NY 10007</p>
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-white text-sm uppercase tracking-wider mb-0.5">Los Angeles Office</p>
-                                        <p>456 Wilshire Blvd, Suite 200<br />Los Angeles, CA 90010</p>
-                                    </div>
+                                    <p>31 Gourdon Ct
+                                        <br />Lake St. Louis, MO 63367 </p>
                                 </div>
                             </address>
                         </div>

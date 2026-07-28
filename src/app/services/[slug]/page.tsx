@@ -69,12 +69,28 @@ export default async function ServiceDetail({ params }: PageProps) {
               {service.shortDescription}
             </p>
 
-            <div className="bg-surface border border-border p-8 rounded-lg mb-10">
+            <div className="bg-surface border border-border p-8 rounded-lg mb-10 space-y-4">
               <h2 className="text-2xl font-black text-primary mb-4">Overview</h2>
-              <p className="text-lg text-secondary leading-relaxed">
-                {service.fullDescription}
-              </p>
+              {service.fullDescription.split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="text-lg text-secondary leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
+
+            {service.whyAuthorsChoose && service.whyAuthorsChoose.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-black text-primary mb-6">Why Authors Choose This Service</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {service.whyAuthorsChoose.map((item, idx) => (
+                    <div key={idx} className="p-5 border border-border bg-surface rounded-lg">
+                      <h3 className="font-bold text-primary text-lg mb-1">{item.title}</h3>
+                      <p className="text-secondary text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <h2 className="text-2xl font-black text-primary mb-6">What's Included</h2>
             <ul className="space-y-4 mb-10">
@@ -89,6 +105,67 @@ export default async function ServiceDetail({ params }: PageProps) {
                 </li>
               ))}
             </ul>
+
+            {service.howItWorks && service.howItWorks.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-black text-primary mb-6">How It Works</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {service.howItWorks.map((item, idx) => (
+                    <div key={idx} className="p-5 border border-border bg-surface rounded-lg flex items-start space-x-4">
+                      <div className="w-8 h-8 rounded-full bg-accent text-white font-bold flex items-center justify-center shrink-0">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-primary text-lg mb-1">{item.step}</h3>
+                        <p className="text-secondary text-sm leading-relaxed">{item.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {service.whoItsFor && service.whoItsFor.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-black text-primary mb-6">Who It's For</h2>
+                <ul className="space-y-3">
+                  {service.whoItsFor.map((item, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <div className="mt-1.5 w-2 h-2 rounded-full bg-accent mr-3 shrink-0" />
+                      <span className="text-lg text-secondary font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {service.whatMakesUsDifferent && service.whatMakesUsDifferent.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-black text-primary mb-6">What Makes Our Approach Different</h2>
+                <ul className="space-y-3">
+                  {service.whatMakesUsDifferent.map((item, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <div className="mt-1.5 w-2 h-2 rounded-full bg-accent mr-3 shrink-0" />
+                      <span className="text-lg text-secondary font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {service.faqs && service.faqs.length > 0 && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-black text-primary mb-6">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {service.faqs.map((faq, idx) => (
+                    <div key={idx} className="p-6 border border-border bg-surface rounded-lg">
+                      <h3 className="font-bold text-primary text-lg mb-2">{faq.question}</h3>
+                      <p className="text-secondary leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Sidebar CTA */}
