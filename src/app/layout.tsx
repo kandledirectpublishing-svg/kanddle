@@ -3,7 +3,7 @@ import { Open_Sans, Raleway, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { LiveChatWidget } from "@/components/layout/LiveChatWidget";
+import { ChatWidget } from "@/components/layout/ChatWidget";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
@@ -196,7 +196,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <LiveChatWidget />
+        <ChatWidget />
         <Analytics />
       </body>
     </html>
