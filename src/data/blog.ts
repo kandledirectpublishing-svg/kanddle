@@ -15,10 +15,191 @@ export interface BlogPost {
 
 export const blogData: BlogPost[] = [
   {
+    slug: "how-to-self-publish-a-book-for-free",
+    title: "How to Self-Publish a Book for Free Online",
+    excerpt: "Learn how to self-publish a book for free in the USA, UAE, Qatar and KSA with this step-by-step guide from Kandle Direct Publishing.",
+    coverImage: "/images/blog/self-publishing-free.jpg",
+    date: "August 10, 2026",
+    author: "Aliah Khan",
+    readTime: "8 min read",
+    category: "Self-Publishing",
+    metaTitle: "How to Self-Publish a Book for Free",
+    metaDescription: "Learn how to self-publish a book for free in the USA, UAE, Qatar and KSA with this step-by-step guide from Kandle Direct Publishing.",
+    keywords: [
+      "how to self-publish a book for free",
+      "self-publishing for free",
+      "free book publishing platforms",
+      "self-publish on Amazon KDP",
+      "publish an eBook for free",
+      "free ISBN self-publishing",
+      "self-publishing guide for new authors",
+      "book publishing services",
+      "USA",
+      "UAE",
+      "Qatar",
+      "KSA"
+    ],
+    content: `
+      <p class="mb-4">Have you finished writing your manuscript and now you're wondering how to self-publish a book for free without handing over thousands of dollars to a traditional publisher? You are not alone. Every year, thousands of first-time writers across the United States, the United Arab Emirates, Qatar, and Saudi Arabia turn to self-publishing to bring their stories to readers on their own terms, while keeping full ownership of their work and their royalties.</p>
+
+      <p class="mb-4">This guide walks you through exactly how to self-publish a book for free, step by step, from polishing your manuscript to choosing the right free publishing platform and getting your book listed on Amazon, Apple Books, and Barnes & Noble. Whether you're writing a novel, a memoir, a children's book, or a business guide, you'll find the tools, tips, and trusted support you need to publish confidently, starting today.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">What Does It Mean to Self-Publish a Book for Free</h2>
+      <p class="mb-4">Self-publishing for free means releasing your book to the world without paying a traditional publishing house or a vanity press upfront. Instead, you use free digital tools and free distribution platforms, such as Amazon Kindle Direct Publishing (KDP), Apple Books, Draft2Digital, and Ingram Spark’s free listing tier, to format, list, and sell your book directly to readers.</p>
+
+      <p class="mb-4">Free self-publishing does not mean low quality. With the right editing, formatting, and cover design, an independently published book can look, read, and sell just as well as one from a traditional publisher, all while you keep control of your rights and royalties.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Why Authors Across the USA, UAE, Qatar and KSA Are Choosing Self-Publishing</h2>
+      <p class="mb-4">Self-publishing has grown rapidly worldwide, and readers and writers across North America and the Middle East are no exception, as more authors look for faster, more affordable ways to reach an audience.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Full Creative Control and Ownership</h3>
+      <p class="mb-4">When you self-publish, nobody tells you what your cover should look like, how your story should end, or when your book gets released. You keep 100% of your rights and can adapt your publishing strategy at any time.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Faster Time to Market</h3>
+      <p class="mb-4">Traditional publishing deals can take one to three years from acceptance to release. Self-publishing lets you go from finished manuscript to a live book on Amazon in as little as a few weeks.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Keep 100% of Your Royalties</h3>
+      <p class="mb-4">Traditional publishers typically pay authors 10 to 15 percent in royalties. Self-published authors using platforms like Amazon KDP can earn up to 70 percent royalty on eBook sales, and keep everything after printing costs on paperbacks.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Step-by-Step Guide on How to Self-Publish a Book for Free</h2>
+      <p class="mb-4">Follow these seven steps to move from finished draft to a published, sellable book without spending money upfront.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 1 — Finish and Edit Your Manuscript</h3>
+      <p class="mb-4">Before anything else, your manuscript needs a thorough edit. Free options include self-editing tools like Grammarly or the Hemingway Editor, followed by feedback from beta readers. For a truly professional finish, many authors also invest in a light professional edit, since this single step has the biggest impact on how readers and reviewers perceive your book.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 2 — Format Your Manuscript for Print and eBook</h3>
+      <p class="mb-4">Formatting turns your Word document into a print-ready PDF and a reflowable eBook file (EPUB or MOBI). Free tools such as the Reedsy Book Editor or Atticus can help you format both versions correctly, so your book looks professional on every device and in print.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 3 — Design a Professional Cover</h3>
+      <p class="mb-4">Your cover is the first thing a reader judges your book by. Free tools like Canva offer templates, but a custom cover created by a professional designer tends to convert far better on retail pages like Amazon, where readers scroll past hundreds of titles in seconds.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 4 — Choose the Right Free Publishing Platform</h3>
+      <p class="mb-4">Not every platform suits every genre or goal. Popular free self-publishing platforms include:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Amazon Kindle Direct Publishing (KDP):</strong> Free eBook and paperback publishing with the widest global reach</li>
+        <li><strong>Apple Books:</strong> Free eBook publishing for iOS and Mac readers</li>
+        <li><strong>Barnes &amp; Noble Press:</strong> Free eBook and print publishing with US retail visibility</li>
+        <li><strong>Draft2Digital:</strong> Free eBook distribution to multiple retailers and library platforms at once</li>
+        <li><strong>IngramSpark:</strong> Free listing for print distribution to bookstores and libraries worldwide</li>
+      </ul>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 5 — Get an ISBN</h3>
+      <p class="mb-4">Amazon KDP provides a free ASIN for eBooks and a free Amazon-owned ISBN for paperbacks. If you plan to publish under your own imprint across multiple platforms, you may want to purchase your own ISBN so your book is registered independently rather than tied to one retailer.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 6 — Publish and Distribute Your Book Globally</h3>
+      <p class="mb-4">Once your formatting, cover, and metadata (title, description, keywords, and categories) are ready, you upload your files and hit publish. Most platforms review and publish new titles within 24 to 72 hours, making your book available to readers in the USA, UAE, Qatar, KSA, and beyond almost immediately.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Step 7 — Market Your Book After Launch</h3>
+      <p class="mb-4">Self-publishing for free covers the cost of getting your book live, but marketing determines whether readers actually find it. Build an author website, plan a social media launch, request honest reviews, choose your Amazon keywords and categories strategically, and consider a limited-time free or discounted promotion to boost early visibility and reviews.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Best Free Self-Publishing Platforms Compared</h2>
+      <p class="mb-4">Here's a quick side-by-side look at the most popular free platforms so you can decide which fits your book and your goals.</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-left border-collapse border border-gray-300 rounded-lg overflow-hidden text-sm md:text-base font-sans">
+          <thead>
+            <tr class="bg-[#1a2f4c] text-white">
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Platform</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Cost</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Format</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Royalty</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Best For</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-surface hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Amazon KDP</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Free</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">eBook and paperback</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Up to 70% eBook royalty</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Widest reach, first-time authors</td>
+            </tr>
+            <tr class="bg-white hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Apple Books</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Free</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">eBook only</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">70% royalty</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Reaching iOS and Mac readers</td>
+            </tr>
+            <tr class="bg-surface hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Barnes &amp; Noble Press</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Free</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">eBook and print</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">65% eBook royalty</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">US market and B&amp;N.com listings</td>
+            </tr>
+            <tr class="bg-white hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Draft2Digital</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Free</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">eBook distribution</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Varies by retailer</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Publishing to many stores at once</td>
+            </tr>
+            <tr class="bg-surface hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">IngramSpark</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Free listing*</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Print and eBook</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">45-85% (varies)</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Bookstore and library distribution</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-secondary italic mb-6">*Ingram Spark’s title setup is free when you skip the optional physical proof copy.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Common Pain Points New Authors Face When Self-Publishing</h2>
+      <p class="mb-4">Free tools remove the cost barrier, but they don't remove the learning curve. Most new authors run into the same frustrations:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Confusing formatting requirements that lead to files being rejected by retailers</li>
+        <li>Spending hours designing a cover that still looks unprofessional next to bestsellers</li>
+        <li>Not knowing which platform fits their genre, budget, or long-term goals</li>
+        <li>Getting lost in ISBN, copyright, and metadata requirements</li>
+        <li>Publishing a book that never gets marketed properly, and never gets read</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">How Kandle Direct Publishing Makes Self-Publishing Even Easier</h2>
+      <p class="mb-4">As a professional <a href="/services" class="text-accent hover:underline"><strong>book publishing services</strong></a> provider, Kandle Direct Publishing works alongside the free tools above to remove the guesswork, so you can publish with confidence instead of trial and error.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Professional editing that polishes your manuscript while keeping your voice intact</li>
+        <li>Custom <a href="/portfolio" class="text-accent hover:underline"><strong>cover design</strong></a> built to stand out and convert browsers into buyers</li>
+        <li>Formatting for both print and digital, ready for Amazon KDP, Apple Books, and Barnes &amp; Noble</li>
+        <li>Retain 100% of your rights and royalties, always, with no hidden fees (see our <a href="/about" class="text-accent hover:underline"><strong>author success stories</strong></a>)</li>
+        <li>One-on-one consultation with a dedicated publishing expert who guides you from first draft to launch, and beyond via our <a href="/blog" class="text-accent hover:underline"><strong>publishing blog</strong></a></li>
+      </ul>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Self-Publishing Considerations for Authors in the UAE, Qatar and Saudi Arabia</h2>
+      <p class="mb-4">Amazon KDP, Apple Books, and other major platforms are fully accessible to authors in the UAE, Qatar, and Saudi Arabia, and royalties can be paid internationally through direct deposit or wire transfer, so location is no longer a barrier to publishing.</p>
+      <p class="mb-4">Authors in these markets should also keep regional content guidelines in mind, since platforms and local distributors may review content for cultural and religious sensitivity before wide release. Working with a publishing partner who understands both the free-platform requirements and regional expectations can help your book launch smoothly the first time, without delays or rejected submissions.</p>
+      <p class="mb-4">Kandle Direct Publishing supports authors internationally, helping writers across the USA, UAE, Qatar, and KSA navigate formatting, distribution, and regional considerations through a single <a href="/contact" class="text-accent hover:underline"><strong>personal consultation</strong></a> with a dedicated expert.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Frequently Asked Questions About How to Self-Publish a Book for Free</h2>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Is Amazon KDP really free to use?</h3>
+      <p class="mb-4">Yes. There are no upfront fees to publish an eBook or paperback on Amazon KDP. Amazon deducts printing costs from paperback sales and takes a royalty share on each sale, but there is no cost to list or publish your book.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">How much does self-publishing actually cost overall?</h3>
+      <p class="mb-4">Publishing itself can be completely free if you handle editing, formatting, and cover design yourself. Most authors, however, invest a modest amount in professional editing and cover design, since these two elements have the biggest impact on sales and reviews.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Do I need an ISBN to self-publish a book for free?</h3>
+      <p class="mb-4">Not always. Amazon KDP assigns a free ASIN for eBooks and a free ISBN for print books. You only need to purchase your own ISBN if you want to publish under your own imprint across multiple retailers.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">How long does it take to self-publish a book?</h3>
+      <p class="mb-4">Once your manuscript, cover, and formatting are ready, most platforms review and publish new titles within 24 to 72 hours. The bulk of the timeline depends on how long editing and formatting take.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Can I self-publish and still pursue traditional publishing later?</h3>
+      <p class="mb-4">Yes, many authors self-publish first to build an audience and sales history, then use that track record when approaching literary agents or traditional publishers for future titles.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Final Thoughts on How to Self-Publish a Book for Free</h2>
+      <p class="mb-4">Learning how to self-publish a book for free comes down to using the right free tools, choosing the right platforms, and avoiding the common mistakes that keep so many manuscripts from ever reaching readers. From editing and formatting to cover design and global distribution, every step is within reach, whether you're writing from New York, Dubai, Doha, or Riyadh.</p>
+      <p class="mb-4">You don't have to figure it out alone. Kandle Direct Publishing helps authors across the USA, UAE, Qatar, and KSA turn a finished manuscript into a professionally published book, while you keep 100% of your rights and royalties.</p>
+      <p class="mb-4"><strong>Ready to publish your book the right way? </strong><a href="/contact" class="text-accent hover:underline"><strong>Contact Kandle Direct Publishing today</strong></a><strong> for your free, personalized publishing guide and one-on-one consultation with a publishing expert, and take the first real step toward becoming a published author.</strong></p>
+    `
+  },
+  {
     slug: "manuscript-assessment-services",
     title: "Manuscript Assessment Services That Reveal What Your Book Really Needs",
     excerpt: "Professional manuscript assessment services for authors in the USA, UAE, Qatar, and KSA. Get an honest, expert review before you edit or publish. Request yours today.",
-    coverImage: "/images/blog/publishing-company.png",
+    coverImage: "/images/blog/manuscript-assessment.jpg",
     date: "July 22, 2026",
     author: "Aliah Khan",
     readTime: "7 min read",
@@ -150,7 +331,7 @@ export const blogData: BlogPost[] = [
     slug: "ghostwriting-services",
     title: "Professional Ghostwriting Services for Authors in the USA, UAE, Qatar and KSA",
     excerpt: "Turn your ideas into a published book. Professional ghostwriting services for authors in the USA, UAE, Qatar and KSA — 100% ownership, expert writers.",
-    coverImage: "/images/blog/publishing-company.png", // Reused an existing image placeholder
+    coverImage: "/images/blog/publishing-consultant.jpg",
     date: "July 22, 2026",
     author: "Aliah Khan",
     readTime: "7 min read",
@@ -861,7 +1042,7 @@ export const blogData: BlogPost[] = [
     slug: "book-editor-dubai",
     title: "Book Editor Dubai Helping Authors in USA, UAE, Qatar and KSA Publish with Confidence",
     excerpt: "Looking for a trusted book editor Dubai authors recommend? Kandle Direct Publishing offers expert editing for writers in the USA, UAE, Qatar and KSA.",
-    coverImage: "/images/blog/publishing-company.png",
+    coverImage: "/images/blog/book-editor-dubai.jpg",
     date: "July 27, 2026",
     author: "Aliah Khan",
     readTime: "6 min read",
