@@ -15,6 +15,229 @@ export interface BlogPost {
 
 export const blogData: BlogPost[] = [
   {
+    slug: "best-self-publishing-companies-usa",
+    title: "How to Choose the Best Self Publishing Companies in the USA",
+    excerpt: "Compare self publishing companies in the USA. Learn costs, services and red flags, then publish your book with Kandle Direct Publishing.",
+    coverImage: "/images/blog/best-self-publishing-companies-usa.jpg",
+    date: "August 20, 2026",
+    author: "Aliah Khan",
+    readTime: "8 min read",
+    category: "Self-Publishing",
+    metaTitle: "Best Self Publishing Companies in the USA - Kandle Direct",
+    metaDescription: "Compare self publishing companies in the USA. Learn costs, services and red flags, then publish your book with Kandle Direct Publishing.",
+    keywords: [
+      "self publishing companies",
+      "self publishing company USA",
+      "book publishing services",
+      "self publishing services",
+      "how to self publish a book",
+      "best self publishing company",
+      "book publishing packages",
+      "self publishing cost",
+      "author royalties",
+      "book distribution",
+      "Amazon KDP",
+      "IngramSpark",
+      "ISBN",
+      "manuscript editing",
+      "book cover design",
+      "interior formatting",
+      "hybrid publishing",
+      "vanity press",
+      "ebook and print on demand"
+    ],
+    content: `
+      <p class="mb-4">You have finished the draft, or you are close, and now the real question hits. Who is going to help you turn this manuscript into a book people can actually buy? For thousands of American authors every year, the answer is one of the many self publishing companies competing for their attention.</p>
+
+      <p class="mb-4">The problem is that they do not all work the same way. Some charge heavy upfront fees and take a cut of your royalties. Others hand you a file and wish you luck. A few genuinely guide you from first edit to final launch. Picking the wrong one can cost you thousands of dollars and months of lost time.</p>
+
+      <p class="mb-4">This guide breaks down what self publishing companies do, what they should cost, which red flags to avoid and how to pick a partner that protects your rights and your royalties. By the end, you will know exactly what to look for and what to ask before you sign anything.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">What Are Self Publishing Companies and How Do They Work?</h2>
+      <p class="mb-4">Self publishing companies are businesses that provide the professional services an author needs to publish a book without going through a traditional publishing house. You keep creative control. In most cases you also keep your rights and a much larger share of the royalties.</p>
+
+      <p class="mb-4">A good self publishing company acts like your publishing department. Instead of you hunting for an editor, a cover designer, a formatter and a marketer on your own, one team coordinates the whole process.</p>
+
+      <p class="mb-4">The market is huge. Bowker, the official ISBN agency in the United States, has reported well over two million self-published titles in a single year, and the number has kept climbing. Readers are buying these books, which means the opportunity for authors is real. So is the competition.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Self Publishing Versus Traditional Publishing</h3>
+      <p class="mb-4">Traditional publishers pay an advance, but they also decide your cover, your timeline and your price. Many first-time authors wait months or years just to hear back from agents. Self publishing flips that. You decide when to publish, how the book looks and how you market it.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Self Publishing Versus Hybrid and Vanity Presses</h3>
+      <p class="mb-4">This is where authors get burned. A vanity press charges you a large fee, delivers a basic product and often keeps rights or inflates printing costs. A hybrid publisher shares costs and risk but still has selection standards. A transparent self publishing company charges for services rendered, and you remain the owner of your book.</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-left border-collapse border border-gray-300 rounded-lg overflow-hidden text-sm md:text-base font-sans">
+          <thead>
+            <tr class="bg-[#1a2f4c] text-white">
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Publishing Route</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Upfront Cost</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Who Owns the Rights</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Typical Royalty</th>
+              <th class="p-3 md:p-4 border border-gray-300 font-bold">Control Over Design and Pricing</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-surface hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Traditional publisher</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">None (advance paid to author)</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Usually the publisher for years</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Low single digits to around 15 percent</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Limited</td>
+            </tr>
+            <tr class="bg-white hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Hybrid publisher</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Moderate to high</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Varies by contract</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Mid range</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Shared</td>
+            </tr>
+            <tr class="bg-surface hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Vanity press</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">High</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Often unclear or shared</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Low and sometimes hidden</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Limited</td>
+            </tr>
+            <tr class="bg-white hover:bg-muted/40 transition-colors">
+              <td class="p-3 md:p-4 border border-gray-300 font-semibold text-primary">Self publishing company</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Pay per service or package</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Author keeps full rights</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Up to 70 percent on retail platforms</td>
+              <td class="p-3 md:p-4 border border-gray-300 text-secondary">Full</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-secondary italic mb-6">Royalty ranges are general industry figures. Always confirm current rates with each platform before you publish.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Why More American Authors Are Choosing Self Publishing Companies</h2>
+      <p class="mb-4">Authors are not choosing this route because it is trendy. They are choosing it because the math and the control make sense.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Higher royalties:</strong> Retail platforms such as Amazon KDP offer up to 70 percent on qualifying ebooks, far above what most traditional contracts pay.</li>
+        <li><strong>Speed to market:</strong> A book can go from final manuscript to live listing in weeks instead of the 18 to 24 months many traditional houses need.</li>
+        <li><strong>Full creative control:</strong> Your title, your cover, your price and your message stay yours.</li>
+        <li><strong>Rights ownership:</strong> You can reprint, repackage, translate or turn the book into an audiobook whenever you choose.</li>
+        <li><strong>Credibility for your brand:</strong> Coaches, consultants and founders use a published book to open doors, win clients and speak at events.</li>
+      </ul>
+      <p class="mb-4">That last point matters more than most people expect. A professionally produced book works like a long-form business card. It is one of the few marketing assets that readers keep on their shelf.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">The Pain Points Authors Face When Hiring a Self Publishing Company</h2>
+      <p class="mb-4">Before you compare providers, it helps to know what goes wrong most often. These are the complaints authors raise again and again.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Hidden fees:</strong> A low package price that balloons once add-ons, revisions and "required" upgrades appear.</li>
+        <li><strong>Template covers and rushed editing:</strong> The book looks self-published in the worst sense of the phrase, and reviewers notice.</li>
+        <li><strong>Rights confusion:</strong> Contracts that bundle services with rights, so leaving the company becomes painful.</li>
+        <li><strong>No marketing plan:</strong> The book goes live, and then nothing happens because no one planned a launch.</li>
+        <li><strong>Poor communication:</strong> Authors get passed between departments and never speak to the same person twice.</li>
+        <li><strong>Inflated author copy prices:</strong> Some companies mark up print copies so heavily that selling at events becomes unprofitable.</li>
+      </ul>
+      <p class="mb-4">If any of these sound familiar, you are not alone. The good news is that every one of them can be spotted before you sign.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Services to Look for in a Self Publishing Company</h2>
+      <p class="mb-4">The best self publishing companies cover the full journey. Here is what a complete service lineup looks like, and why each piece matters.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Writing Support and Ghostwriting</h3>
+      <p class="mb-4">Not every author wants to write every word. If you have the expertise but not the time, professional <a href="/services/ghostwriting" class="text-accent hover:underline"><strong>ghostwriting services</strong></a> can turn your ideas, interviews and outlines into a finished manuscript in your own voice.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Editing and Proofreading</h3>
+      <p class="mb-4">Editing is the single biggest quality gap between amateur and professional books. A complete process includes developmental editing for structure, line editing for flow, copyediting for grammar and a final proofread. Strong <a href="/services/copyediting" class="text-accent hover:underline"><strong>book editing services</strong></a> catch what you are too close to see.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Book Cover Design</h3>
+      <p class="mb-4">Readers do judge a book by its cover. In a crowded Amazon category, your cover has a split second to signal genre, quality and trust. Custom <a href="/services/book-cover-design" class="text-accent hover:underline"><strong>book cover design</strong></a> beats a recycled template every time.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Interior Formatting and ISBN Registration</h3>
+      <p class="mb-4">Clean interior layout, correct trim sizes and proper ISBN setup keep your book ready for retailers and libraries. Mistakes here lead to rejected files and delays.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Distribution</h3>
+      <p class="mb-4">A book that readers cannot find does not sell. Look for a company that handles Amazon KDP setup and wider distribution through platforms like IngramSpark, so your book can reach bookstores, libraries and online retailers across the country.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Book Marketing and Launch Support</h3>
+      <p class="mb-4">Publishing is not the finish line. It is the starting line. Quality <a href="/services/concept-development" class="text-accent hover:underline"><strong>book marketing services</strong></a> cover pre-launch buzz, review campaigns, author platforms, ads and press outreach, so your first week of sales is not your last.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">How Much Do Self Publishing Companies Cost in the USA?</h2>
+      <p class="mb-4">This is the question every author asks, and the honest answer is that it depends on what you need. Costs vary widely based on book length, genre, editing depth and marketing scope.</p>
+      <p class="mb-4">Here is a general way to think about it.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Editing:</strong> Usually priced by word count and level of edit.</li>
+        <li><strong>Cover design:</strong> Ranges from basic to fully custom with illustrations.</li>
+        <li><strong>Formatting:</strong> Depends on page count and complexity, especially for books with images or tables.</li>
+        <li><strong>Marketing:</strong> Can be a one-time launch package or an ongoing monthly service.</li>
+      </ul>
+      <p class="mb-4">A fair company explains each line item and lets you choose what you need. Be careful with anyone who refuses to share pricing until after a sales call, or who pressures you with "limited time" discounts.</p>
+      <p class="mb-4">To get the best return, spend where it shows. Editing and cover design have the strongest impact on reviews and sales. Cutting corners there is the most expensive mistake an author can make.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Red Flags to Watch for Before You Sign</h2>
+      <p class="mb-4">Use this quick checklist before you commit to any provider.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>They ask for a share of your royalties on top of service fees.</li>
+        <li>They claim ownership of your ISBN, files or rights.</li>
+        <li>Their contract is vague about what happens if you leave.</li>
+        <li>They guarantee bestseller status, which no honest company can do.</li>
+        <li>They push expensive marketing add-ons before your book is even edited.</li>
+        <li>They have no verifiable portfolio, reviews or physical business presence.</li>
+      </ul>
+      <p class="mb-4">A trustworthy company hands you the contract, answers questions plainly and is happy for you to compare options.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">How to Choose the Right Self Publishing Company for Your Book</h2>
+      <p class="mb-4">Use these steps to narrow your shortlist with confidence.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Define Your Goal First</h3>
+      <p class="mb-4">Are you publishing a memoir for family, a novel for a wide readership or a business book to grow your brand? Your goal shapes the services you need and the budget that makes sense.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Ask for Samples and a Clear Process</h3>
+      <p class="mb-4">Review cover samples, edited excerpts and sample timelines. A confident company shows its work.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Confirm You Keep Your Rights and Royalties</h3>
+      <p class="mb-4">You should own your manuscript, your cover files, your ISBN and your retail accounts. Royalties from Amazon and other retailers should go directly to you.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Look for Real Communication</h3>
+      <p class="mb-4">You should know who your project manager is and how fast they respond. A company that is slow before you pay will be slower after.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Check Reviews and Track Record</h3>
+      <p class="mb-4">Search for independent reviews, author testimonials and published books you can look up and buy. Real results are easy to verify.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Why Authors Trust Kandle Direct Publishing</h2>
+      <p class="mb-4">Kandle Direct Publishing was built for authors who want professional results without losing control of their work. Instead of selling one-size-fits-all packages, the team supports you at every stage, from concept and manuscript through design, publishing, distribution and marketing.</p>
+      <p class="mb-4">Here is what authors can expect.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Transparent process:</strong> You know what is included, what it costs and what happens next.</li>
+        <li><strong>You keep your rights:</strong> Your book, your files and your royalties belong to you.</li>
+        <li><strong>A complete team:</strong> Writers, editors, designers and marketers work together under one roof.</li>
+        <li><strong>Support built for the US market:</strong> From KDP setup to launch planning, the strategy is designed around how American readers find and buy books.</li>
+        <li><strong>Personal guidance:</strong> A real person walks you through each decision, so you are never guessing.</li>
+      </ul>
+      <p class="mb-4">Whether you are starting with a rough idea or a polished manuscript, the team meets you where you are and builds a plan around your goals.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Frequently Asked Questions About Self Publishing Companies</h2>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Are self publishing companies worth it?</h3>
+      <p class="mb-4">For most authors, yes. If you want professional editing, cover design and distribution without learning every technical step yourself, a reliable company saves time and avoids costly mistakes. The key is choosing one that is transparent and leaves ownership with you.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Do I keep my rights when I use a self publishing company?</h3>
+      <p class="mb-4">You should. Reputable companies charge for services and do not take your rights. Always read the contract and confirm in writing that you own your manuscript, cover and ISBN.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">How long does it take to self publish a book?</h3>
+      <p class="mb-4">Timelines depend on the state of your manuscript. A finished manuscript can often be edited, designed, formatted and published within a few months. Ghostwriting and in-depth developmental editing add time.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">Can I self publish on Amazon without a company?</h3>
+      <p class="mb-4">Yes, and many authors do. But you will handle editing, design, formatting, ISBNs and marketing yourself or hire freelancers one by one. A self publishing company brings those pieces together and keeps quality consistent.</p>
+
+      <h3 class="text-xl font-serif font-bold text-primary mt-6 mb-3">What is the difference between self publishing and a vanity press?</h3>
+      <p class="mb-4">Self publishing means you stay in control and own your book. A vanity press charges high fees, delivers little value and may restrict your rights or inflate print costs.</p>
+
+      <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">Conclusion</h2>
+      <p class="mb-4">The right partner can turn your manuscript into a book you are proud to put your name on. The wrong one can drain your budget and stall your career as an author. The difference comes down to transparency, quality and ownership.</p>
+      <p class="mb-4">When you compare self publishing companies, look beyond the sales pitch. Check what is included, confirm you keep your rights and royalties, and make sure there is a real plan for editing, design, distribution and marketing.</p>
+
+      <div class="mt-8 p-6 md:p-8 bg-surface rounded-2xl border border-border">
+        <h3 class="text-2xl font-serif font-bold text-primary mb-3">Ready to Publish Your Book?</h3>
+        <p class="mb-4 text-secondary">Your story deserves to be read. Do not let confusion, hidden fees or the wrong partner hold it back.</p>
+        <p class="mb-0"><a href="/contact" class="text-accent hover:underline font-bold">Contact Kandle Direct Publishing today</a> for a free consultation. Tell us about your book, and our team will map out a clear, honest plan to take it from manuscript to marketplace.</p>
+      </div>
+    `
+  },
+  {
     slug: "how-to-self-publish-a-book-for-free",
     title: "How to Self-Publish a Book for Free Online",
     excerpt: "Learn how to self-publish a book for free in the USA, UAE, Qatar and KSA with this step-by-step guide from Kandle Direct Publishing.",
