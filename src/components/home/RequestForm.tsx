@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2, ArrowRight, ShieldCheck } from "lucide-react";
 
 const schema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -16,6 +16,7 @@ type FormData = z.infer<typeof schema>;
 
 interface RequestFormProps {
   source?: string;
+  compact?: boolean;
 }
 
 function validate(data: Partial<FormData>): Partial<Record<keyof FormData, string>> {
@@ -29,7 +30,7 @@ function validate(data: Partial<FormData>): Partial<Record<keyof FormData, strin
   return errors;
 }
 
-export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
+export function RequestForm({ source = "Homepage Form", compact = false }: RequestFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [serverError, setServerError] = useState("");
@@ -74,14 +75,14 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
 
   if (isSuccess) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-8 text-center flex flex-col items-center gap-4 text-primary">
-        <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
-          <CheckCircle size={28} />
+      <div className="bg-emerald-50/90 border border-emerald-200 rounded-2xl p-8 text-center flex flex-col items-center gap-3.5 text-primary animate-in fade-in zoom-in-95 duration-300">
+        <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 shadow-sm">
+          <CheckCircle size={30} />
         </div>
         <div>
-          <h3 className="font-serif text-xl font-bold mb-1">Request Received!</h3>
-          <p className="font-sans text-sm text-secondary">
-            Thank you! We have received your details and our publishing expert will contact you within 1 business day.
+          <h3 className="font-serif text-xl font-bold mb-1.5 text-primary">Free Guide on Its Way!</h3>
+          <p className="font-sans text-xs sm:text-sm text-secondary leading-relaxed max-w-sm">
+            Thank you! Your publishing blueprint will be sent shortly. A publishing advisor will reach out within 1 business day.
           </p>
         </div>
       </div>
@@ -89,8 +90,9 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 text-primary" noValidate>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit(onSubmit)} className={`${compact ? 'space-y-2.5' : 'space-y-4'} text-primary`} noValidate>
+      {/* Row 1: Names */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="block font-sans text-xs font-bold text-secondary mb-1.5 uppercase tracking-wider">
             First Name <span className="text-accent">*</span>
@@ -99,8 +101,8 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
             {...register("firstName")}
             type="text"
             placeholder="Jane"
-            className={`w-full p-2.5 border rounded-lg font-sans text-sm outline-none transition-all focus:ring-2 focus:ring-accent/40 focus:border-accent ${
-              errors.firstName ? "border-red-400 bg-red-50" : "border-border bg-white"
+            className={`w-full ${compact ? 'px-3 py-2 text-xs sm:text-sm rounded-lg' : 'p-3 text-sm rounded-xl'} border font-sans outline-none transition-all duration-200 focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+              errors.firstName ? "border-red-400 bg-red-50/50" : "border-border bg-white hover:border-gray-400"
             }`}
           />
           {errors.firstName && (
@@ -115,8 +117,8 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
             {...register("lastName")}
             type="text"
             placeholder="Smith"
-            className={`w-full p-2.5 border rounded-lg font-sans text-sm outline-none transition-all focus:ring-2 focus:ring-accent/40 focus:border-accent ${
-              errors.lastName ? "border-red-400 bg-red-50" : "border-border bg-white"
+            className={`w-full ${compact ? 'px-3 py-2 text-xs sm:text-sm rounded-lg' : 'p-3 text-sm rounded-xl'} border font-sans outline-none transition-all duration-200 focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+              errors.lastName ? "border-red-400 bg-red-50/50" : "border-border bg-white hover:border-gray-400"
             }`}
           />
           {errors.lastName && (
@@ -125,38 +127,41 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
         </div>
       </div>
 
-      <div>
-        <label className="block font-sans text-xs font-bold text-secondary mb-1.5 uppercase tracking-wider">
-          Email Address <span className="text-accent">*</span>
-        </label>
-        <input
-          {...register("email")}
-          type="email"
-          placeholder="jane@example.com"
-          className={`w-full p-2.5 border rounded-lg font-sans text-sm outline-none transition-all focus:ring-2 focus:ring-accent/40 focus:border-accent ${
-            errors.email ? "border-red-400 bg-red-50" : "border-border bg-white"
-          }`}
-        />
-        {errors.email && (
-          <p className="text-red-500 text-xs mt-1 font-sans">{errors.email.message}</p>
-        )}
-      </div>
+      {/* Row 2: Email and Phone */}
+      <div className={compact ? "grid grid-cols-1 sm:grid-cols-2 gap-3" : "space-y-4"}>
+        <div>
+          <label className="block font-sans text-xs font-bold text-secondary mb-1.5 uppercase tracking-wider">
+            Email Address <span className="text-accent">*</span>
+          </label>
+          <input
+            {...register("email")}
+            type="email"
+            placeholder="jane@example.com"
+            className={`w-full ${compact ? 'px-3 py-2 text-xs sm:text-sm rounded-lg' : 'p-3 text-sm rounded-xl'} border font-sans outline-none transition-all duration-200 focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+              errors.email ? "border-red-400 bg-red-50/50" : "border-border bg-white hover:border-gray-400"
+            }`}
+          />
+          {errors.email && (
+            <p className="text-red-500 text-xs mt-1 font-sans">{errors.email.message}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block font-sans text-xs font-bold text-secondary mb-1.5 uppercase tracking-wider">
-          Phone Number <span className="text-accent">*</span>
-        </label>
-        <input
-          {...register("phone")}
-          type="tel"
-          placeholder="+44 7000 000000"
-          className={`w-full p-2.5 border rounded-lg font-sans text-sm outline-none transition-all focus:ring-2 focus:ring-accent/40 focus:border-accent ${
-            errors.phone ? "border-red-400 bg-red-50" : "border-border bg-white"
-          }`}
-        />
-        {errors.phone && (
-          <p className="text-red-500 text-xs mt-1 font-sans">{errors.phone.message}</p>
-        )}
+        <div>
+          <label className="block font-sans text-xs font-bold text-secondary mb-1.5 uppercase tracking-wider">
+            Phone Number <span className="text-accent">*</span>
+          </label>
+          <input
+            {...register("phone")}
+            type="tel"
+            placeholder="+44 7000 000000"
+            className={`w-full ${compact ? 'px-3 py-2 text-xs sm:text-sm rounded-lg' : 'p-3 text-sm rounded-xl'} border font-sans outline-none transition-all duration-200 focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+              errors.phone ? "border-red-400 bg-red-50/50" : "border-border bg-white hover:border-gray-400"
+            }`}
+          />
+          {errors.phone && (
+            <p className="text-red-500 text-xs mt-1 font-sans">{errors.phone.message}</p>
+          )}
+        </div>
       </div>
 
       {serverError && (
@@ -168,17 +173,27 @@ export function RequestForm({ source = "Homepage Form" }: RequestFormProps) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-accent text-white font-sans font-bold text-sm py-3 rounded-lg hover:bg-accent-hover transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer mt-2"
+        className={`w-full bg-accent text-white font-sans font-bold ${
+          compact ? 'py-2.5 text-xs sm:text-sm mt-1 rounded-lg' : 'py-3.5 text-sm sm:text-base mt-2 rounded-xl'
+        } hover:bg-accent-hover transition-colors shadow-xs flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer active:scale-[0.99]`}
       >
         {isSubmitting ? (
           <>
-            <Loader2 size={16} className="animate-spin" />
-            Sending...
+            <Loader2 size={18} className="animate-spin" />
+            <span>Sending Request...</span>
           </>
         ) : (
-          "Get My Free Guide"
+          <>
+            <span>Get My Free Publishing Guide</span>
+            <ArrowRight size={16} />
+          </>
         )}
       </button>
+
+      <div className="flex items-center justify-center gap-1.5 text-xs text-secondary/80 pt-1">
+        <ShieldCheck size={14} className="text-accent" />
+        <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
+      </div>
     </form>
   );
 }

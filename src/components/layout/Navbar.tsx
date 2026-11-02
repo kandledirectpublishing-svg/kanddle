@@ -1,90 +1,134 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-
-import { servicesData } from '@/data/services';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { Phone, Menu, X, ArrowRight } from 'lucide-react';
 
 export function Navbar() {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Services', href: '/services' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact Us', href: '/contact' },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-primary bg-primary text-white">
-      {/* Top Bar for Phone Number (Trust Signal) */}
-      <div className="bg-background text-primary border-b border-border py-2 px-4 md:px-6 flex justify-end items-center text-sm font-sans">
-        <span className="mr-2">Ready to publish? Call us:</span>
-        <a href="tel:+447922656521" className="font-bold hover:text-accent transition-colors flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          +44 7922 656521
-        </a>
-      </div>
-
-      {/* Main Navbar */}
-      <div className="container mx-auto px-4 md:px-6 flex h-16 items-center justify-between relative">
-        <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.png"
-              alt="Kandle Direct Publishing Logo"
-              width={160}
-              height={160}
-              className="h-29 w-35 object-contain"
-              priority
+    <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 transition-all duration-300">
+      {/* Floating Pill Container (matching screenshot) */}
+      <div className={`max-w-5xl mx-auto bg-white/95 backdrop-blur-md rounded-full border border-[#E7E3D8] shadow-sm transition-all duration-300 px-4 sm:px-6 ${
+        isScrolled ? 'py-2 shadow-md' : 'py-2.5 sm:py-3'
+      }`}>
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group py-1 flex-shrink-0">
+            <img
+              src="/logo-dark.png"
+              alt="Kandle Direct Publishing"
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
             />
           </Link>
-        </div>
 
-        <nav className="hidden md:flex gap-6 items-center font-sans font-semibold text-gray-300 h-full">
-          <Link href="/" className="hover:text-accent transition-colors">Home</Link>
+          {/* Desktop Navigation Links (strictly matching screenshot: Pricing, Services, About Us, Blog, Contact Us) */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 font-['DM_Sans',sans-serif] text-sm font-medium">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`transition-colors duration-200 ${
+                    isActive
+                      ? 'text-teal-600 font-semibold'
+                      : 'text-stone-700 hover:text-teal-600'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
 
-          <div className="relative h-full flex items-center"
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}>
-            <button className="flex items-center hover:text-accent transition-colors py-2">
-              Services
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {isServicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[800px] max-w-[90vw] bg-card border border-border rounded-b-lg shadow-xl p-6 mt-0">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
-                  {servicesData.map((service) => (
-                    <Link
-                      key={service.slug}
-                      href={`/services/${service.slug}`}
-                      className="block p-3 rounded-md hover:bg-surface hover:text-accent transition-colors group"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      <div className="font-bold text-primary group-hover:text-accent transition-colors text-sm mb-1">{service.title}</div>
-                      <div className="text-xs text-secondary font-normal line-clamp-2">{service.shortDescription}</div>
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-4 pt-4 border-t border-border flex justify-center">
-                  <Link href="/services" className="text-sm font-bold text-accent hover:underline flex items-center" onClick={() => setIsServicesOpen(false)}>
-                    View All Services <span className="ml-1">→</span>
-                  </Link>
-                </div>
-              </div>
-            )}
+          {/* Right Action Buttons */}
+          <div className="hidden sm:flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <a
+              href="tel:+447922656521"
+              className="text-xs font-semibold text-secondary hover:text-primary transition-colors flex items-center gap-1.5"
+            >
+              <Phone className="w-3.5 h-3.5 text-accent" />
+              <span>+44 7922 656521</span>
+            </a>
+            <Link
+              href="/contact"
+              className="bg-accent hover:bg-accent-hover text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 rounded-full transition-all duration-200 shadow-xs hover:shadow-sm"
+            >
+              Get Started
+            </Link>
           </div>
 
-          <Link href="#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
-          <Link href="/blog" className="hover:text-accent transition-colors">Blog</Link>
-          <Link href="/contact" className="hover:text-accent transition-colors">Contact</Link>
-        </nav>
-
-        <div className="flex items-center">
-          <Link href="/contact" className="bg-accent text-white font-sans font-bold py-2 px-4 rounded hover:bg-accent-hover transition-colors shadow">
-            Get Started
-          </Link>
+          {/* Mobile Hamburger Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-1.5 rounded-full text-secondary hover:text-primary focus:outline-none"
+            aria-label="Toggle navigation menu"
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Drawer */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden mt-2 max-w-sm mx-auto bg-white rounded-2xl border border-[#E7E3D8] shadow-lg p-5 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="flex flex-col space-y-3 font-['DM_Sans',sans-serif] text-sm font-medium text-secondary">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`py-1.5 transition-colors ${
+                    isActive ? 'text-teal-600 font-bold' : 'hover:text-primary'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+
+            <div className="pt-3 border-t border-[#E7E3D8] flex flex-col gap-2.5">
+              <a
+                href="tel:+447922656521"
+                className="text-xs font-semibold text-primary flex items-center gap-2 py-1"
+              >
+                <Phone className="w-3.5 h-3.5 text-accent" />
+                <span>+44 7922 656521</span>
+              </a>
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full text-center bg-accent text-white text-xs font-bold py-2.5 rounded-full hover:bg-accent-hover transition-colors"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ChatWidget } from "@/components/layout/ChatWidget";
 import { Analytics } from "@vercel/analytics/next";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import Script from "next/script";
 
 const openSans = Open_Sans({
@@ -191,11 +192,13 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${raleway.variable} ${montserrat.variable} antialiased font-sans bg-background text-primary selection:bg-secondary selection:text-white`}
       >
-        <Navbar />
+        <SmoothScroll>
+          <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
+          <Footer />
+        </SmoothScroll>
         <ChatWidget />
         <Analytics />
       </body>

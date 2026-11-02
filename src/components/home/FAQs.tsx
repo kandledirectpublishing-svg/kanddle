@@ -1,34 +1,55 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqsList = [
   {
-    question: "Do I keep 100% of my rights and royalties?",
-    answer: "Yes, absolutely. With Kandle Direct, you retain full ownership, copyright, and control of your book. You keep 100% of the net royalties generated from all book sales."
+    question: "Can I try Kandle for free?",
+    answer:
+      "Yes. You can consult with our publishing advisors, receive a comprehensive manuscript review, and explore our custom publishing roadmap completely free of charge with zero obligation.",
   },
   {
-    question: "How much does it cost to publish a book with Kandle Direct?",
-    answer: "We offer clear, customized pricing packages tailored to your specific needs. Whether you need comprehensive editing, formatting, cover design, or just global distribution setup, we will provide a clear, transparent quote before starting. No hidden fees."
+    question: "How long will it take to publish my book with Kandle?",
+    answer:
+      "Most manuscripts are fully edited, custom-designed, formatted, and live across global retail channels within 4 to 8 weeks, depending on the scope of editorial review and author feedback cycles.",
   },
   {
-    question: "What platforms will my book be distributed to?",
-    answer: "We publish and distribute your book globally to all major retailers, including Amazon Kindle, Barnes & Noble, Apple Books, Google Play, Kobo, and other brick-and-mortar library databases through our global distribution partners."
+    question: "How much does publishing with Kandle cost?",
+    answer:
+      "We offer transparent, fixed-price publishing tiers based strictly on your manuscript length and required services. You will receive an all-inclusive quote upfront with no hidden recurring platform fees.",
   },
   {
-    question: "How long does the book publishing process take?",
-    answer: "On average, the publishing timeline is between 4 to 8 weeks. This depends heavily on the level of editing required, cover design revisions, and how quickly you review and approve files. Your dedicated consultant will keep you updated at every step."
+    question: "What payment methods can I use?",
+    answer:
+      "We accept all major credit and debit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, Google Pay, and direct wire transfers via secure 256-bit encrypted checkout.",
   },
   {
-    question: "Can you publish both print and eBook formats?",
-    answer: "Yes. We format and optimize books for both digital formats (EPUB/Kindle) and high-quality print-on-demand formats (paperback and hardcover), ensuring your book looks professional on any device or bookshelf."
+    question: "What if I change my mind?",
+    answer:
+      "We provide a 100% satisfaction guarantee. If you are not satisfied with your initial manuscript review or sample proofs, you are backed by our transparent production agreement.",
   },
   {
-    question: "Will I have support throughout the publishing journey?",
-    answer: "Yes, every author gets paired with a dedicated publishing consultant who coordinates everything, answers your questions, and acts as your single point of contact from manuscript upload to live book launch."
-  }
+    question: "Does Kandle support any languages other than English?",
+    answer:
+      "Yes. While English is our primary publishing language, we have dedicated editorial, typesetting, and global distribution capabilities for Spanish, French, German, and multilingual editions.",
+  },
+  {
+    question: "How do royalties work?",
+    answer:
+      "You retain 100% of your net royalties. Sales earnings from Amazon KDP, Barnes & Noble, Apple Books, and IngramSpark are deposited directly to your bank account with zero middleman royalty deductions.",
+  },
+  {
+    question: "Before uploading my manuscript to Kandle's platform, what format should it be in?",
+    answer:
+      "We accept Microsoft Word (.docx, .doc), Rich Text Format (.rtf), and PDF files. Our editorial team handles all clean-up, styling, and structural conversion into professional print and eBook files.",
+  },
+  {
+    question: "What other services do you offer?",
+    answer:
+      "In addition to core editing, cover art, and distribution, we offer professional audiobook production, author website creation, global copyright and ISBN registration, and promotional launch campaigns.",
+  },
 ];
 
 export function FAQs() {
@@ -39,52 +60,58 @@ export function FAQs() {
   };
 
   return (
-    <section className="py-20 bg-background border-t border-border">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">
+    <section id="faqs" className="py-20 lg:py-28 bg-background border-b border-[#E7E3D8]">
+      <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header (matching screenshot 7) */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2 className="section-heading text-primary">
             Frequently Asked Questions
           </h2>
-          <p className="font-sans text-lg text-secondary">
-            Everything you need to know about publishing your book with Kandle Direct.
+          <p className="mt-3 font-['DM_Sans',sans-serif] text-secondary text-sm sm:text-base">
+            Everything you need to know about the product and billing.
           </p>
         </div>
 
-        <div className="space-y-4">
+        {/* Clean Accordion List with '+' Icon */}
+        <div className="border-t border-[#E7E3D8] divide-y divide-[#E7E3D8]">
           {faqsList.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div 
-                key={index} 
-                className="bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
-              >
+              <div key={index} className="py-4 sm:py-5">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 flex justify-between items-center gap-4 focus:outline-none focus:ring-2 focus:ring-accent/40 cursor-pointer"
+                  className="w-full text-left flex justify-between items-center gap-4 focus:outline-none cursor-pointer group"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg font-bold text-primary transition-colors hover:text-accent">
+                  <span className={`font-['DM_Sans',sans-serif] text-sm sm:text-base font-semibold transition-colors duration-200 ${
+                    isOpen ? "text-accent" : "text-primary group-hover:text-accent"
+                  }`}>
                     {faq.question}
                   </span>
-                  <ChevronDown 
-                    className={`text-secondary flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-accent" : ""}`}
-                    size={20}
-                  />
+                  
+                  {/* Plus Icon matching Screenshot 7 */}
+                  <span className="flex-shrink-0 text-cyan-600 sm:text-teal-600 group-hover:text-accent transition-transform duration-200">
+                    <Plus
+                      className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 ${
+                        isOpen ? "rotate-45 text-accent" : ""
+                      }`}
+                    />
+                  </span>
                 </button>
-                
+
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pt-0 border-t border-border/50">
-                        <p className="font-sans text-secondary leading-relaxed pt-4">
-                          {faq.answer}
-                        </p>
-                      </div>
+                      <p className="mt-3 font-['DM_Sans',sans-serif] text-xs sm:text-sm text-secondary leading-relaxed max-w-3xl pr-6">
+                        {faq.answer}
+                      </p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -92,6 +119,7 @@ export function FAQs() {
             );
           })}
         </div>
+
       </div>
     </section>
   );
