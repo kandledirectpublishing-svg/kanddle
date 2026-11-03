@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import { ContactPageClient } from "@/components/contact/ContactPageClient";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get a Free Publishing Consultation",
+  title: "Contact Kandle Direct Publishing | Call +44 7922 656521 | Free Book Consultation",
   description:
-    "Speak with a professional publishing expert at Kandle Direct Publishing. Get a free, no-obligation consultation for your book project — call, email, or fill in the form.",
+    "Speak directly with a dedicated publishing consultant at +44 7922 656521. Claim your free manuscript evaluation, custom publishing roadmap, and keep 100% of your net royalties.",
   openGraph: {
-    title: "Contact Kandle Direct Publishing",
+    title: "Contact Kandle Direct Publishing | Call +44 7922 656521",
     description:
-      "Speak with a professional publishing expert. Get a free, no-obligation consultation for your book project.",
+      "Speak directly with a professional publishing consultant. Claim your free manuscript evaluation and production roadmap.",
+  },
+  alternates: {
+    canonical: "https://www.kandledirectpublishing.com/contact",
   },
 };
 

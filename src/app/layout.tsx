@@ -34,13 +34,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kandledirectpub
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Kandle Direct: Professional Book Publishing Services",
+    default: "Direct Publishing Services | Keep 100% Royalties | Kandle Direct",
     template: "%s | Kandle Direct Publishing",
   },
   alternates: {
     canonical: siteUrl,
   },
-  description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production.",
+  description: "Professional direct publishing services with 100% royalties. Expert book editing, custom cover art, interior formatting, and global retail distribution with zero royalty cuts.",
   keywords: [
     // Primary Keywords
     "book publishing services",

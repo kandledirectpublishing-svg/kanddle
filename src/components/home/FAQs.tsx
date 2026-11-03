@@ -59,8 +59,27 @@ export function FAQs() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqsList.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <section id="faqs" className="py-20 lg:py-28 bg-background border-b border-[#E7E3D8]">
+      {/* Schema.org FAQPage Structured Data for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header (matching screenshot 7) */}

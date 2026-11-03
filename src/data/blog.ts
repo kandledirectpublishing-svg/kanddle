@@ -1165,7 +1165,16 @@ export const blogData: BlogPost[] = [
       </ul>
 
       <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">5. Professional Help Goes a Long Way</h2>
-      <p class="mb-4">While the upload process is free and straightforward, the work required to prepare a professional book is extensive. Partnering with a specialized service like <strong>Kandle Direct Publishing</strong> ensures your eBook is professionally formatted, edited, and given a high-converting cover, maximizing your chances of climbing the Amazon Bestseller charts.</p>
+      <p class="mb-4">While the upload process is free and straightforward, the work required to prepare a professional book is extensive. Partnering with a specialized team ensures your book is expertly produced. Explore our <a href="/services/book-cover-design" class="text-accent underline font-semibold hover:text-accent-hover">Custom Book Cover Design</a> and <a href="/services/interior-formatting-typesetting" class="text-accent underline font-semibold hover:text-accent-hover">eBook & Print Formatting Services</a>, or view our transparent <a href="/pricing" class="text-accent underline font-semibold hover:text-accent-hover">Publishing Packages</a> to keep 100% of your Amazon net royalties.</p>
+      <div class="mt-6 p-6 rounded-2xl bg-surface border border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-bold text-primary text-base mb-1">Ready to Publish on Amazon KDP?</h4>
+          <p class="text-secondary text-xs">Consult with a publishing director and get a transparent production quote.</p>
+        </div>
+        <a href="/pricing" class="px-5 py-2.5 rounded-full bg-accent text-white text-xs font-bold hover:bg-accent-hover transition-colors whitespace-nowrap">
+          View Publishing Packages &rarr;
+        </a>
+      </div>
     `
   },
 {
@@ -1197,7 +1206,16 @@ export const blogData: BlogPost[] = [
       <p class="mb-4">eBook distributors require both an inline Table of Contents and an NCX (logical) Table of Contents. A static list of chapters with page numbers is useless. Instead, hyperlink your chapters directly so readers can jump to any section with a single tap.</p>
 
       <h2 class="text-2xl font-serif font-bold text-primary mt-8 mb-4">5. Uploading Unclean Word Documents</h2>
-      <p class="mb-4">Simply converting a ".docx" file to <strong>EPUB format</strong> using automated converters often leaves behind hidden styling tags, bloated HTML, and broken font spacing. For a clean file that loads instantly and works on Apple Books, Google Play, and Amazon Kindle, it is highly recommended to seek professional eBook compilation services.</p>
+      <p class="mb-4">Simply converting a ".docx" file to <strong>EPUB format</strong> using automated converters often leaves behind hidden styling tags, bloated HTML, and broken font spacing. For a clean file that loads instantly and works on Apple Books, Google Play, and Amazon Kindle, explore our professional <a href="/services/interior-formatting-typesetting" class="text-accent underline font-semibold hover:text-accent-hover">Interior Formatting & Typesetting Services</a>. You can also view our <a href="/pricing" class="text-accent underline font-semibold hover:text-accent-hover">Publishing Packages</a> to launch your book with 100% of royalties retained.</p>
+      <div class="mt-6 p-6 rounded-2xl bg-surface border border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-bold text-primary text-base mb-1">Need Flawless Book Formatting?</h4>
+          <p class="text-secondary text-xs">Get error-free EPUB and print-ready files approved for all major stores.</p>
+        </div>
+        <a href="/services/interior-formatting-typesetting" class="px-5 py-2.5 rounded-full bg-accent text-white text-xs font-bold hover:bg-accent-hover transition-colors whitespace-nowrap">
+          View Formatting Services &rarr;
+        </a>
+      </div>
     `
   },
 {

@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import { PortfolioClient } from '@/components/portfolio/PortfolioClient';
 
 export const metadata: Metadata = {
-    title: 'Portfolio | Published Book Covers & Design Work',
+  title: 'Published Books Portfolio | Bestseller Covers & Layouts | Kandle Direct',
+  description:
+    'Explore 1,200+ published titles, bespoke cover art, and interior typography crafted for independent authors. See real bestseller success stories who kept 100% of their royalties.',
+  openGraph: {
+    title: 'Published Books Portfolio | Kandle Direct Publishing',
     description:
-        'Browse our portfolio of professionally published books — cover designs, typesetting, and author success stories. See the quality of our publishing services at Kandle Direct.',
-    openGraph: {
-        title: 'Our Portfolio | Kandle Direct Publishing',
-        description:
-            'See our published work — professional book covers, interior design, and global bestsellers from our authors.',
-    },
-    alternates: {
-        canonical: 'https://www.kandledirectpublishing.com/portfolio',
-    },
+      'Explore our gallery of published titles, custom cover art, and interior formatting across Amazon KDP and global bookstores.',
+  },
+  alternates: {
+    canonical: 'https://www.kandledirectpublishing.com/portfolio',
+  },
 };
 
 export default function PortfolioPage() {
-    return <PortfolioClient />;
+  return <PortfolioClient />;
 }
